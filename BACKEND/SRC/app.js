@@ -9,12 +9,11 @@ app.use(express.json());
 
 //health check
 
-app.get("/health", (req, res) => {
-    res.json({
-        status: "ok",
+app.get("/", (req, res) => {
+    res.status(200).json({
         success: true,
         message: "Server is healthy",
-    })
+    });
 });
 
 module.exports = app;
