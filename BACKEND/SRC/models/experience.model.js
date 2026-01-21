@@ -15,7 +15,12 @@ const ExperienceSchema = new mongoose.Schema({
     description: {
         type: String,
     },
-
+    techStack: [
+        {
+            type: String,
+            required: true
+        }
+    ],
     image: [
         {
             type: String,

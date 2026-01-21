@@ -18,7 +18,7 @@ const SkillSchema = new mongoose.Schema({
     },
     isPrimaryRole: {
         type: Boolean,
-        default: false,
+        default: true,
     },
 
 
