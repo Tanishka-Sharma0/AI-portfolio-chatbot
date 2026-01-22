@@ -1,8 +1,8 @@
-import Skill from "../models/skill.model";
-import Education from "../models/Education.model";
-import Profile from "../models/ProfileSection.model";
-import Experience from "../models/experience.model";
-import Project from "../models/project.model";
+import Skill from "../models/skill.model.js";
+import Education from "../models/Education.model.js";
+import Profile from "../models/ProfileSection.model.js";
+import Experience from "../models/experience.model.js";
+import Project from "../models/project.model.js";
 
 export const buildRAGContext = async () => {
     const skill = await Skill.find();

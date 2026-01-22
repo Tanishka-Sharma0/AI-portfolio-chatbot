@@ -4,10 +4,11 @@ import { buildProofContext } from "../services/proof.service.js";
 import { buildPrompt } from "../services/prompt.service.js";
 import { generateAIResponse } from "../services/ai.service.js";
 import AdminConfig from "../models/AdminConfig.model.js";
-
+import { logger } from "../utils/logger.js"
 
 export const chatWithAI = async (req, res) => {
     try {
+        logger.info("Chat request received")
         const { message, context } = req.body;
 
         if (!message || message.trim() === "") {
@@ -57,7 +58,7 @@ export const chatWithAI = async (req, res) => {
             source: context || "full-portfolio",
         });
     } catch (err) {
-        console.error("Chat Controller Error:", err.message);
+        logger.error("Chat Controller Error:", err.message);
         res.status(500).json({
             success: false,
             message: "Something went wrong while processing the chat"

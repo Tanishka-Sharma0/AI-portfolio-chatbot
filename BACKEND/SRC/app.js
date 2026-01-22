@@ -8,6 +8,7 @@ import educationRoutes from "./routes/education.routes.js";
 import chatRoutes from "./routes/chat.routes.js";
 import QuestionRoutes from "./routes/question.routes.js";
 import adminRoutes from "./routes/admin.routes.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 
 const app = express();
 
@@ -24,6 +25,8 @@ app.use("/api/profile", profileRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/question", QuestionRoutes);
 app.use("/api/admin", adminRoutes);
+
+app.use(errorHandler);
 
 app.get("/", (req, res) => {
     res.status(200).json({

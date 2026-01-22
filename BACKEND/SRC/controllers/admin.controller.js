@@ -1,4 +1,4 @@
-import AdminConfig from "../models/AdminConfig.model";
+import AdminConfig from "../models/AdminConfig.model.js";
 
 const getConfig = async () => {
     let config = await AdminConfig.findOne();
