@@ -14,6 +14,11 @@ const ProjectSchema = new mongoose.Schema({
             type: String
         },
     ],
+    images: [
+        {
+            type: String,
+        }
+    ],
     githubLink: String,
     liveLink: String,
 

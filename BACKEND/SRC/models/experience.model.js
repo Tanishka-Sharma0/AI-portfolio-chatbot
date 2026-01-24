@@ -21,12 +21,6 @@ const ExperienceSchema = new mongoose.Schema({
             required: true
         }
     ],
-    image: [
-        {
-            type: String,
-        }
-    ],
-
     keywords: [
         {
             type: String,
